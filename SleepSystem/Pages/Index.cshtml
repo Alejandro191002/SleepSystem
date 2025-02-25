@@ -6,8 +6,55 @@
 
 <link rel="stylesheet" href="~/css/Syle.css" asp-append-version="true" />
 
-<div class="text-center">
-    <h1 class="display-4">Sleep Sistem</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-    <a asp-page="Login_" class="btn btn_primary">Empezar </a>
+<!-- Sección Hero con imagen de fondo -->
+<div class="hero-section" style="background-image: url('/images/hero-background.jpg');">
+    <div class="hero-overlay">
+        <div class="text-center text-white">
+            <h1 class="display-4">Sleep System</h1>
+            <p class="lead">
+                Descubre cómo los trastornos del sueño pueden afectar tu rendimiento y salud. <br>Nuestro proyecto te ofrece herramientas para mejorar tu calidad de vida.
+            </p>
+            <a asp-page="Login_" class="btn btn-primary btn-lg">Empezar</a>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de tarjetas informativas -->
+<div class="container my-4">
+    <div class="row">
+        <!-- Tarjeta: Importancia del Sueño -->
+        <div class="col-md-4 mb-4">
+            <div class="card card-custom h-100">
+                <img src="~/images/sueno_importancia.png" class="card-img-top" alt="Importancia del sueño">
+                <div class="card-body">
+                    <h5 class="card-title">Importancia del Sueño</h5>
+                    <p class="card-text">El sueño es vital para mantener la salud física y mental, y para un rendimiento óptimo en el día a día.</p>
+                    <a href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0026-17422013000400002" class="btn btn-primary mt-2">Saber más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta: Nuestro Objetivo -->
+        <div class="col-md-4 mb-4">
+            <div class="card card-custom h-100">
+                <img src="~/images/objetivo.jpg" class="card-img-top" alt="Nuestro objetivo">
+                <div class="card-body">
+                    <h5 class="card-title">Nuestro Objetivo</h5>
+                    <p class="card-text">Brindarte herramientas y diagnósticos tempranos para mejorar tu calidad de sueño y bienestar general.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta: Pre-diagnóstico -->
+        <div class="col-md-4 mb-4">
+            <div class="card card-custom h-100">
+                <img src="~/images/prediagnostico.png" class="card-img-top" alt="Pre-diagnóstico">
+                <div class="card-body">
+                    <h5 class="card-title">Pre-diagnóstico</h5>
+                    <p class="card-text">A través del cuestionario PSQI, analizamos tu calidad de sueño y te ofrecemos un pre-diagnóstico personalizado.</p>
+                    <a href="https://bi.cibersam.es/busqueda-de-instrumentos/ficha?Id=254" class="btn btn-primary mt-2">¿Qué es el PSQI?</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
