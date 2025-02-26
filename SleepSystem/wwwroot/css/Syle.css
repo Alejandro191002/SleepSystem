@@ -50,7 +50,12 @@
     background-repeat: no-repeat;
 }
 
-
+.btn-warning:hover {
+    background-color: #7a56a2;
+    border-color: #ffc107;
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
 
 /* Overlay oscuro para mejorar la legibilidad */
 .hero-overlay {
@@ -81,3 +86,14 @@
         transform: translateY(0);
     }
 }
+
+.navbar .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    transition: background-color 0.3s ease;
+}
+
+    .navbar .btn-info:hover {
+        background-color: #138496;
+        border-color: #138496;
+    }
