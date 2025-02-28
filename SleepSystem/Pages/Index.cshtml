@@ -58,3 +58,104 @@
         </div>
     </div>
 </div>
+
+<!-- Secciones Esenciales -->
+<section class="essential-sections mt-5" style="background-color: #fff8f0; padding: 80px 0; border-top: 1px solid #e0e0e0;" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-family: 'Georgia', serif; color: #7a5c42;">
+            <i class="fas fa-bed me-2"></i> Secciones Esenciales
+        </h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4">
+                <h4 style="color: #6b4f4f;">
+                    <i class="fas fa-moon me-2"></i> ¿Qué es el sueño realmente?
+                </h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #5a4a4a;">
+                    El sueño es un proceso biológico vital que permite a nuestro cuerpo y mente descansar y regenerarse. Durante el sueño se consolidan recuerdos, se restablecen las energías y se regulan funciones hormonales esenciales para la salud física y mental.
+                </p>
+                <p style="font-size: 1rem; color: #5a4a4a;">
+                    Un sueño de calidad es fundamental para la creatividad, el aprendizaje y para enfrentar el estrés diario. Es el pilar para un bienestar integral.
+                </p>
+            </div>
+            <div class="col-md-6 mb-4 text-center">
+                <h4 style="color: #6b4f4f;">
+                    <i class="fas fa-sync-alt me-2"></i> Ciclos del sueño (REM/NREM)
+                </h4>
+                <p style="font-size: 1rem; color: #5a4a4a;">
+                    Explora el diagrama para comprender cómo se alternan las fases del sueño y por qué cada una es crucial.
+                </p>
+                <!-- Imagen animada; se usa REM.jpg y se establece tamaño máximo de 600px -->
+                <img src="~/images/REM.jpg" class="img-fluid rounded shadow-sm" alt="Diagrama animado de los ciclos del sueño" style="max-width: 600px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Problemática Específica en Maquilas -->
+<section class="problematic-section mt-5" style="background-color: #fdf3e7; padding: 80px 0; border-top: 1px solid #e0e0e0;" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-family: 'Georgia', serif; color: #7a5c42;">
+            <i class="fas fa-exclamation-triangle me-2"></i> Problemática Específica en Maquilas
+        </h2>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 style="color: #6b4f4f;">
+                    <i class="fas fa-clock me-2"></i> Turnos rotativos vs. ritmos circadianos
+                </h4>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #5a4a4a;">
+                    En el entorno de maquilas, los turnos rotativos son muy comunes. Se estima que entre un <strong>35-40%</strong> de los trabajadores cambian constantemente sus horarios, lo que interfiere con su ritmo circadiano natural. Esta alteración puede provocar fatiga, menor concentración y, a largo plazo, aumentar el riesgo de problemas de salud.
+                </p>
+                <p style="font-size: 1rem; color: #5a4a4a;">
+                    La falta de un sueño adecuado impacta negativamente en la productividad y el bienestar general, haciendo urgente la necesidad de soluciones adaptadas.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cómo nuestro sistema aborda el problema -->
+<section class="system-solution mt-5" style="background-color: #fff8f0; padding: 80px 0; border-top: 1px solid #e0e0e0;" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-family: 'Georgia', serif; color: #7a5c42;">
+            <i class="fas fa-tools me-2"></i> Cómo nuestro sistema aborda el problema
+        </h2>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #5a4a4a;">
+            Nuestro sistema integra diagnósticos interactivos, herramientas de análisis y recomendaciones personalizadas que te ayudan a restablecer tus ritmos naturales. Con evaluaciones precisas y sugerencias prácticas, apoyamos tanto al empleado como a las empresas para mejorar la calidad del sueño y, en consecuencia, la productividad.
+        </p>
+    </div>
+</section>
+
+<!-- Elementos Interactivos: Calculadora de Déficit de Sueño -->
+<section class="interactive-elements mt-5 mb-5" style="background-color: #fdf3e7; padding: 80px 0; border-top: 1px solid #e0e0e0;" data-aos="fade-up">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-family: 'Georgia', serif; color: #7a5c42;">
+            <i class="fas fa-calculator me-2"></i> Elementos Interactivos
+        </h2>
+        <div class="sleep-calculator card card-custom p-4 mx-auto" style="max-width: 500px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" data-aos="zoom-in">
+            <h5 style="color: #6b4f4f;">Calculadora de déficit de sueño</h5>
+            <p style="font-size: 1rem; color: #5a4a4a;">Ingresa tus horas diarias de sueño para saber cuánto podrías estar perdiendo en productividad:</p>
+            <input type="number" id="sleepHours" class="form-control" placeholder="Horas de sueño">
+            <button class="btn btn-warning btn-lg mt-3 w-100" onclick="calculateDeficit()">Calcular</button>
+            <div id="result" class="mt-3" style="font-size: 1rem; color: #5a4a4a;"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function calculateDeficit() {
+        var hours = parseFloat(document.getElementById('sleepHours').value);
+        var recommended = 8;
+        var resultDiv = document.getElementById('result');
+        if (isNaN(hours)) {
+            resultDiv.innerHTML = "Por favor, ingresa un número válido.";
+            return;
+        }
+        if (hours >= recommended) {
+            resultDiv.innerHTML = "¡Excelente! No tienes déficit de sueño.";
+        } else {
+            var deficit = recommended - hours;
+            var productivityLoss = deficit * 10; // Ejemplo: cada hora de déficit equivale a 10% de productividad perdida.
+            resultDiv.innerHTML = "Tienes un déficit de " + deficit.toFixed(1) + " horas. Esto podría representar una pérdida de productividad del " + productivityLoss.toFixed(0) + "%.";
+        }
+    }
+</script>
