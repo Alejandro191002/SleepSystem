@@ -1,59 +1,69 @@
 ﻿@page
-@model SleepSystem.Models.User_
-
-
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@addTagHelper *, AuthoringTagHelpers
+@model Controllers.LoginController
 
 @{
 
-    ViewData["Title"] = "Login";
+	ViewData["Title"] = "Login";
 
 }
-
-
 
 
 <div class="text-center">
     <h1 class="display-4">Sleep Sistem</h1>
 
-
-
+  
+    
 </div>
 
 <div id="FormDiv">
-
-
-
-    <form asp-controller="Home" asp-action="CreateUser" method="post">
-
+    <form>
         <label>Nombres</label>
-        <input class="form-control" type="text" placeholder="Nombre" asp-for="Name" />
+        <input class="form-control" type="text" placeholder="Nombre" />
         <label>Apellidos</label>
-        <input class="form-control" type="text" placeholder="Apellidos" asp-for="LastName" />
+        <input class="form-control" type="text" placeholder="Apellidos" />
         <label>Edad</label>
-        <input class="form-control" type="number" placeholder="0" asp-for="Age" />
+        <input class="form-control" type="text" placeholder="0" />
         <label>Genero</label>
-        <select class="form-control" asp-for="Genre">
+        <select class="form-control">
             <option>Hombre</option>
             <option>Mujer</option>
             <option>Prefiero no decirlo</option>
         </select>
-        <label>Ocupación</label>
-        <input class="form-control" type="text" placeholder="0" asp-for="Occupation" />
-        <label>Correo</label>
-        <input class="form-control" type="text" placeholder="Nombre" asp-for="Mail" />
-        <label>Nacimiento</label>
-        <input class="form-control" type="date" placeholder="Nacimiento" asp-for="Birth" />
-        <label>Contraseña</label>
-        <input class="form-control" type="text" placeholder="0" asp-for="Password" />
-
-
-        <button class="btn btn-primary " type="submit">Siguiente</button>
-
+        <label>Ocupación</label>
+        <input class="form-control" type="text" placeholder="0" />
+        
 
     </form>
 
+</div>
 
+<div id="FormDiv2" style="display: none">
+    <form>
+        <label>Correo</label>
+        <input class="form-control" type="text" placeholder="Nombre" />
+        <label>Nacimiento</label>
+        <input class="form-control" type="text" placeholder="Apellidos" />
+        <label>Contraseña</label>
+        <input class="form-control" type="text" placeholder="0" />
+        <label>Genero</label>
+    </form>
 
 </div>
+
+<button class="btn btn-primary " onclick="alternarDivs()">Siguiente</button>
+
+
+<script>
+    function alternarDivs() {
+        var div1 = document.getElementById("FormDiv");
+        var div2 = document.getElementById("FormDiv2");
+
+        if (div1.style.display === "none") {
+            div1.style.display = "block";
+            div2.style.display = "none";
+        } else {
+            div1.style.display = "none";
+            div2.style.display = "block";
+        }
+    }
+</script>

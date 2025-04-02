@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SleepSystem.Models;
 
 namespace SleepSystem.Controllers
 {
@@ -10,20 +9,5 @@ namespace SleepSystem.Controllers
         {
             return View();
         }
-
-        [HttpPost]
-        public IActionResult CreateUser(User_ model)
-        {
-
-            if (model == null)
-            {
-                return BadRequest("Modelo inválido");
-            }
-
-            return RedirectToAction("Index");
-        }
     }
-
 }
-
-
