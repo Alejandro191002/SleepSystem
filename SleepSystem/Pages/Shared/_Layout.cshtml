@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SleepSystem.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-GYk26rE8nLZfWlD0WqYBz6F1H62hE+8rxzVepZhy+o83oh63+og+pr8VRsV+7tLQ9G05W4XxOUssA8HV0s1d5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH/PR+2V8ZyTzbzRyYxZY4IY/EBdEj6u3Qg3s5HUl5rJefHDLS+z/0TwIwH+1Q9w2O4E2bZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -37,6 +40,15 @@
     <div class="container my-4">
         @RenderBody()
     </div>
+    
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-BJeoXijbPnlrWCHZsKtn/q2wHxD7UZn2rjg+5ihx/1XfBYAm1KwqNwxVQDJclX/9NzTnNmoHVN4YtC1P+Cx5gQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init({
+          duration: 1000,
+          once: true
+        });
+    </script>
 
     <footer class="bg-light text-center p-3 mt-5">
         © @DateTime.Now.Year - SleepSystem
