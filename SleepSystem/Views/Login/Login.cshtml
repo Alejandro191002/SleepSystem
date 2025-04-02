@@ -1,0 +1,58 @@
+﻿@page
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Login";
+}
+
+@model SleepSystem.Models.AddUsercs;
+
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+
+
+<div class="text-center">
+    <h1 class="display-4">Sleep System</h1>
+
+
+
+</div>
+
+<div id="FormDiv">
+
+
+
+    <form asp-controller="Login" asp-action="Login" method="post">
+
+        <label>Nombres</label>
+        <input class="form-control" type="text" placeholder="Nombre" asp-for="Name" />
+        <label>Apellidos</label>
+        <input class="form-control" type="text" placeholder="Apellidos" asp-for="LastName" />
+        <label>Edad</label>
+        <input class="form-control" type="number" placeholder="0" asp-for="Age" />
+        <label>Genero</label>
+        <select class="form-control" asp-for="Genre">
+            <option>Hombre</option>
+            <option>Mujer</option>
+            <option>Prefiero no decirlo</option>
+        </select>
+        <label>Ocupación</label>
+        <input class="form-control" type="text" placeholder="0" asp-for="Occupation" />
+        <label>Correo</label>
+        <input class="form-control" type="text" placeholder="Nombre" asp-for="Mail" />
+        <label>Nacimiento</label>
+        <input class="form-control" type="date" placeholder="Nacimiento" asp-for="Birth" />
+        <label>Contraseña</label>
+        <input class="form-control" type="text" placeholder="0" asp-for="Password" />
+
+
+        <button class="btn btn-primary " type="submit">Siguiente</button>
+
+
+    </form>
+
+
+
+</div>
